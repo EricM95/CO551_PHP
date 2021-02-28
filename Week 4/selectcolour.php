@@ -1,10 +1,15 @@
 <html>
   <head><title>Select colour page</title></head>
     <body>
-      <?php $selqty = 'selqty';
-      setcookie($selqty, $_POST['selqty']); ?>
+      <?php session_start() ?>
+      <?php 
+      $_SESSION['selqty'] = $_POST['selqty'];
+      $qty = $_SESSION['selqty'];
+      $_SESSION['size'] = $_POST['size'];
+     print_r($_SESSION);
+    ?>
       <form action="confirmation.php"  method="post">
-	Select the colour for the <?php echo $_POST['selqty'] ?> widgets you are ordering
+	Select the colour for the <?php echo $qty; ?> widgets you are ordering
    	<select name="selcolour">
    	  <option>white</option>
 	  <option>red</option>
