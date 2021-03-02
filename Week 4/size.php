@@ -5,10 +5,6 @@
         <?php 
             $_SESSION['selqty'] = $_POST['selqty'];
             
-            if(isset($_SESSION['txtprice'])){
-                unset($_SESSION['txtprice']);
-            }
-            session_destroy();
             print_r($_SESSION);
         ?>
         <form action="selectcolour.php" method="post">

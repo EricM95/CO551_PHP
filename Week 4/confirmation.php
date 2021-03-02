@@ -2,9 +2,8 @@
 <?php
 //$price = $_SESSION['txtprice'];
 $qty = $_SESSION['selqty'];
-$_SESSION['size'] = 'size';
 $total = $qty * $price; 
-switch ($_POST['size'])
+switch ($_GET['size'])
 {
    
 }

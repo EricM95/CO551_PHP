@@ -3,7 +3,6 @@
     <body>
       <?php session_start() ?>
       <?php 
-      $_SESSION['selqty'] = $_POST['selqty'];
       $qty = $_SESSION['selqty'];
       $_SESSION['size'] = $_POST['size'];
      print_r($_SESSION);
