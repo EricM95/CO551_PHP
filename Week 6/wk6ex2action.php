@@ -6,20 +6,21 @@
 	// Execute query
     $result = mysqli_query($link, $sql);
 	$row = mysqli_fetch_assoc($result);
-    
+    //print_r($result);
+	//print_r($row);
 ?>
 <html>
 <body>
 <form action="wk6ex2show.php" method="post">
 
 	Name :
-	<input type=text name=txtname value="<? echo $row[name] ?>" readonly />
+	<input type=text name=txtname value="<?php echo $row[name] ?>" readonly />
 	</br>
 	Phone number :
-	<input type=text name=txttelno value="<? echo $row[phone_number] ?>" />
+	<input type=text name=txttelno value="<?php echo $row[phone_number] ?>" />
 	</br>
 	Email :
-	<input type=text name=txtemail value="<? echo $row[email] ?>" />
+	<input type=text name=txtemail value="<?php echo $row[email] ?>" />
 	</br>
 	<input type=submit name=btnsubmit value="save"/>
 </form>
