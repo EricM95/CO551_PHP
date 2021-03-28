@@ -21,10 +21,20 @@ function html_footer()
 	echo "</html>";
 }
 
-function calculatetax($salary, $rate)
+function calculatetax($salary, $rate=40, $allowance=12570)
 {
+	$salaryallowance = $salary - $allowance;
+
+	if ($salaryallowance>0)
+	{
 	$tax = ($salary * ($rate/100));
 	return $tax;
+	}
+	else
+	{
+		$tax = 0;
+		return $tax;
+	}
 }
 
 ?>
