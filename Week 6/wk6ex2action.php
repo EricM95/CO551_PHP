@@ -1,6 +1,9 @@
 <?php	
-    $link = mysqli_connect("localhost", "root", "", "db1_21815369");
+	session_start();
+	
+;    $link = mysqli_connect("localhost", "root", "", "db1_21815369");
 	// Connect to server and select database
+	$_SESSION['nameID'] = $_GET[id];
 
 	$sql = "SELECT * FROM test WHERE name = '$_GET[id]' ";
 	// Execute query
@@ -24,5 +27,10 @@
 	</br>
 	<input type=submit name=btnsubmit value="save"/>
 </form>
+
+<form action="wk6ex2delete.php" method="post">
+	<a href action="wk6ex2delete.php" onclick="return confirm('Are you sure you want to delete this record?');"> Delete </a>
+</form>
+
 </body>
 </html>
