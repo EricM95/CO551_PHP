@@ -11,7 +11,7 @@
 ?>
 <html>
 <body>
-<form action="wk6ex2show.php" method="post">
+<form action="wk6ex2save.php" method="post">
 
 	Name :
 	<input type=text name=txtname value="<?php echo $row["name"] ?>" readonly />

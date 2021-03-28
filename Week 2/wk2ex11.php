@@ -16,11 +16,10 @@
     {
         echo "Module code is  $index  and the grade is $value <br/>";
         $total = $total + $mymarks[$index];
-    $average = $total / 6;
+        $average = $total / 6;
+        $average = round($average,2);
     }
 
-  //  $total = $total + $mymarks[$index];
-  //  $average = $total / 6;
 
     echo "My average grade is  $average";
 ?>
